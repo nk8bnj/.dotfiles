@@ -27,7 +27,6 @@ return {
 				"tailwindcss",
 				"angularls",
 				"lua_ls",
-				"graphql",
 				"emmet_ls",
 				"prismals",
 			},

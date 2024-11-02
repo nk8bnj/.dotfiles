@@ -53,27 +53,30 @@ return {
 				},
 			},
 			sections = {
+				-- lualine_a section
 				lualine_a = {
-					function()
-						local file = vim.fn.expand("%:t")
-						local extension = vim.fn.expand("%:e")
-						local full_path = vim.fn.expand("%:p")
+					{
+						function()
+							local file = vim.fn.expand("%:t")
+							local extension = vim.fn.expand("%:e")
+							local full_path = vim.fn.expand("%:p")
 
-						-- Check if the file exists
-						if vim.fn.filereadable(full_path) == 1 then
-							local icon = require("nvim-web-devicons").get_icon(file, extension)
-							local modified_icon = "[+]"
-							-- local modified_icon = ""
+							-- Check if the file exists
+							if vim.fn.filereadable(full_path) == 1 then
+								local icon = require("nvim-web-devicons").get_icon(file, extension)
+								local modified_icon = "[+]"
+								-- local modified_icon = ""
 
-							if vim.bo.modified then
-								return icon .. " " .. file .. " " .. modified_icon
+								if vim.bo.modified then
+									return icon .. " " .. file .. " " .. modified_icon
+								else
+									return icon .. " " .. file
+								end
 							else
-								return icon .. " " .. file
+								return " explorer"
 							end
-						else
-							return " explorer"
-						end
-					end,
+						end,
+					},
 				},
 				lualine_b = {
 					{ "fancy_branch", icon = "" },
