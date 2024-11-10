@@ -7,6 +7,7 @@ $character
 """
 
 right_format = """
+$cmd_duration
 $nodejs\
 $docker_context\
 $time"""
@@ -79,6 +80,10 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "fg:#94A0A1 bold"
 format = '[⦿ $time ]($style)'
+
+[cmd_duration]
+style = "fg:yellow"
+format = '[took $duration]($style) '
 
 
 # "$schema" = 'https://starship.rs/config-schema.json'

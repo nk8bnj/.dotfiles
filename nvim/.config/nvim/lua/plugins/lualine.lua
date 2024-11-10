@@ -44,9 +44,9 @@ return {
 			options = {
 				theme = "auto",
 				component_separators = { left = " ", right = "-" },
-				-- section_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
 				-- section_separators = { left = "", right = "" },
-				section_separators = { left = "", right = "" },
+				-- section_separators = { left = "", right = "" },
 				globalstatus = true,
 				refresh = {
 					statusline = 100,
@@ -65,7 +65,6 @@ return {
 							if vim.fn.filereadable(full_path) == 1 then
 								local icon = require("nvim-web-devicons").get_icon(file, extension)
 								local modified_icon = "[+]"
-								-- local modified_icon = ""
 
 								if vim.bo.modified then
 									return icon .. " " .. file .. " " .. modified_icon
@@ -82,7 +81,7 @@ return {
 					{ "fancy_branch", icon = "" },
 					{
 						"fancy_diff",
-						symbols = { added = " ", modified = " ", removed = " " }, -- Changes the symbols used by the diff.
+						symbols = { added = " ", modified = " ", removed = " " },
 						colored = true,
 					},
 				},
@@ -92,7 +91,7 @@ return {
 					-- 	"filename",
 					-- 	path = 1,
 					-- },
-					-- { "mode", icon_enabled = true },
+					{ "mode", icon_enabled = true },
 					-- function()
 					--   return mode_map[vim.api.nvim_get_mode().mode] or "__"
 					-- end,
