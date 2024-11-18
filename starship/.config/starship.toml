@@ -154,7 +154,7 @@ format = '[⦿ $symbol ]($style)'
 
 [git_branch]
 symbol = ""
-style = "fg:#68CA81"
+style = "fg:green"
 format = '[⦿ ](fg:#94A0A1)[$symbol $branch ]($style)'
 
 [git_status]
