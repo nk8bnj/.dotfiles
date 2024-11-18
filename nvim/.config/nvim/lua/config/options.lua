@@ -54,10 +54,14 @@ vim.opt.undofile = true
 vim.opt.undolevels = 10000
 
 vim.opt.fillchars = {
-  foldopen = "",
-  foldclose = "",
-  fold = " ",
-  foldsep = " ",
-  diff = "╱",
-  eob = " ",
+	foldopen = "",
+	foldclose = "",
+	fold = " ",
+	foldsep = " ",
+	diff = "╱",
+	eob = " ",
 }
+
+-- spell check
+-- vim.opt.spell = true
+-- vim.spelllang = "en_us"

@@ -1,139 +1,31 @@
-format = """
-$directory\
-$git_branch\
-$git_status\
-
-$character
-"""
-
-right_format = """
-$cmd_duration
-$nodejs\
-$docker_context\
-$time"""
-
-add_newline = false
-
-[character]
-# success_symbol = "[❯](#43AC9F)"
-success_symbol = "[ ](#4DC5B6)"
-# error_symbol = "[ ❯](red)"
-error_symbol = "[ ](red)"
-vimcmd_symbol = "[ ❮](green)"
-
-[username]
-show_always = true
-style_user = "bg:#9A348E"
-style_root = "bg:#9A348E"
-format = '[$user ]($style)'
-disabled = true
-
-[os]
-style = "bg:#9A348E"
-disabled = true # Disabled by default
-
-[directory]
-# truncation_symbol = '󰝰  '
-truncate_to_repo = false
-# home_symbol = '  ~'
-# home_symbol = '~'
-read_only_style = '197'
-read_only = '  '
-format = '[ $path ](fg:#F38E61 bold)'
-# style = "bg:#DA627D"
-# format = "[ $path ]($style)"
-truncation_length = 1
-# truncation_symbol = "…/"
-
-[docker_context]
-symbol = " "
-style = "fg:blue"
-format = '[⦿ $symbol ]($style)'
-
-[git_branch]
-symbol = ""
-style = "fg:green"
-format = '[⦿ $symbol $branch ]($style)'
-
-[git_status]
-format = '([\( $all_status$ahead_behind\) ]($style))'
-style = 'bold green'
-conflicted = '[ ${count}](red) '
-# up_to_date = '[󰘽 up-to-date](green) '
-untracked = '[󰋗 ${count}](red) '
-ahead = ' ${count}'
-diverged = ' ${ahead_count}  ${behind_count}'
-behind = ' ${count}'
-stashed = '[ ${count}](green) '
-modified = '[󰛿 ${count}](yellow) '
-staged = '[󰐗 ${count}](green) '
-renamed = '[󱍸 ${count}](yellow) '
-deleted = '[󰍶 ${count}](red) '
-
-[nodejs]
-symbol = ""
-style = "fg:purple"
-format = '[⦿ $symbol ($version) ]($style)'
-
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "fg:#94A0A1 bold"
-format = '[⦿ $time ]($style)'
-
-[cmd_duration]
-style = "fg:yellow"
-format = '[took $duration]($style) '
-
-
-# "$schema" = 'https://starship.rs/config-schema.json'
-# palette = "catppuccin_frappe"
+# # format = """
+# # $directory\
+# # $git_branch\
+# # $git_status\
+# # $character
+# # """
+# #
+# # right_format = """
+# # $cmd_duration
+# # $nodejs\
+# # $docker_context\
+# # $time"""
 #
-# format = """$directory\
-# $git_branch\
-# $git_status\
-#
-# $character
+# format = """
+# [╭─]()$directory$rust$git_branch$git_state$git_status$fill $cmd_duration$package$golang$terraform$docker_context$docker_context$nodejs$time
+# [╰─]() $character
 # """
-#
-# right_format = """
-# $nodejs\
-# $docker_context\
-# $time"""
 #
 # add_newline = false
 #
-# [palettes.catppuccin_frappe]
-# rosewater = "#f2d5cf"
-# flamingo = "#eebebe"
-# pink = "#f4b8e4"
-# mauve = "#ca9ee6"
-# red = "#e78284"
-# maroon = "#ea999c"
-# peach = "#ef9f76"
-# yellow = "#e5c890"
-# green = "#a6d189"
-# teal = "#81c8be"
-# sky = "#99d1db"
-# sapphire = "#85c1dc"
-# blue = "#8caaee"
-# lavender = "#babbf1"
-# text = "#c6d0f5"
-# subtext1 = "#b5bfe2"
-# subtext0 = "#a5adce"
-# overlay2 = "#949cbb"
-# overlay1 = "#838ba7"
-# overlay0 = "#737994"
-# surface2 = "#626880"
-# surface1 = "#51576d"
-# surface0 = "#414559"
-# base = "#303446"
-# mantle = "#292c3c"
-# crust = "#232634"
+# [fill]
+# symbol = " "
 #
 # [character]
-# success_symbol = "[ ](blue)"
-# error_symbol = "[ ](red)"
+# success_symbol = "[❯](#43AC9F)"
+# # success_symbol = "[ ](#4DC5B6)"
+# error_symbol = "[ ❯](red)"
+# # error_symbol = "[ ](red)"
 # vimcmd_symbol = "[ ❮](green)"
 #
 # [username]
@@ -148,12 +40,17 @@ format = '[took $duration]($style) '
 # disabled = true # Disabled by default
 #
 # [directory]
+# # truncation_symbol = '󰝰  '
 # truncate_to_repo = false
+# # home_symbol = '  ~'
+# # home_symbol = '~'
 # read_only_style = '197'
 # read_only = '  '
-# style = "fg:mauve"
-# format = '[ $path ]($style bold)'
+# format = ' [ 󰝰 ](bg:#94A0A1 fg:#000000 bold)[](fg:#94A0A1 bg:#485259 bold)[ $path ](fg:white bg:#485259 bold)[ ](fg:#485259 bold)'
+# # style = "bg:#DA627D"
+# # format = "[ $path ]($style)"
 # truncation_length = 1
+# # truncation_symbol = "…/"
 #
 # [docker_context]
 # symbol = " "
@@ -182,11 +79,110 @@ format = '[took $duration]($style) '
 #
 # [nodejs]
 # symbol = ""
-# style = "fg:peach"
+# style = "fg:purple"
 # format = '[⦿ $symbol ($version) ]($style)'
 #
 # [time]
 # disabled = false
 # time_format = "%R" # Hour:Minute Format
-# style = "fg:maroon bold"
+# style = "fg:#94A0A1 bold"
 # format = '[⦿ $time ]($style)'
+#
+# [cmd_duration]
+# style = "fg:yellow"
+# format = '[took $duration]($style) '
+
+
+# format = """
+# $directory\
+# $git_branch\
+# $git_status\
+# $character
+# """
+#
+# right_format = """
+# $cmd_duration
+# $nodejs\
+# $docker_context\
+# $time"""
+
+format = """
+[╭─]()$directory$rust$git_branch$git_state$git_status$package$golang$terraform$docker_context$docker_context$nodejs$cmd_duration
+[╰─]()$character
+"""
+
+add_newline = false
+
+[fill]
+symbol = " "
+
+[character]
+success_symbol = "[❯](#4DC5B6)"
+# success_symbol = "[ ](#4DC5B6)"
+error_symbol = "[❯](red)"
+# error_symbol = "[ ](red)"
+vimcmd_symbol = "[ ❮](green)"
+
+[username]
+show_always = true
+style_user = "bg:#9A348E"
+style_root = "bg:#9A348E"
+format = '[$user ]($style)'
+disabled = true
+
+[os]
+style = "bg:#9A348E"
+disabled = true # Disabled by default
+
+[directory]
+# truncation_symbol = '󰝰  '
+truncate_to_repo = false
+# home_symbol = '  ~'
+# home_symbol = '~'
+read_only_style = '197'
+read_only = '  '
+format = '[ $path ](fg:#F38E61 bold)'
+# style = "bg:#DA627D"
+# format = "[ $path ]($style)"
+truncation_length = 5
+# truncation_symbol = "…/"
+
+[docker_context]
+symbol = " "
+style = "fg:blue"
+format = '[⦿ $symbol ]($style)'
+
+[git_branch]
+symbol = ""
+style = "fg:#68CA81"
+format = '[⦿ ](fg:#94A0A1)[$symbol $branch ]($style)'
+
+[git_status]
+format = '([\( $all_status$ahead_behind\) ]($style))'
+style = 'bold green'
+conflicted = '[ ${count}](red) '
+# up_to_date = '[󰘽 up-to-date](green) '
+untracked = '[󰋗 ${count}](red) '
+ahead = ' ${count}'
+diverged = ' ${ahead_count}  ${behind_count}'
+behind = ' ${count}'
+stashed = '[ ${count}](green) '
+modified = '[󰛿 ${count}](yellow) '
+staged = '[󰐗 ${count}](green) '
+renamed = '[󱍸 ${count}](yellow) '
+deleted = '[󰍶 ${count}](red) '
+
+[nodejs]
+symbol = ""
+style = "fg:#D182D8"
+format = '[⦿ ](fg:#94A0A1)[$symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "fg:#94A0A1 bold"
+format = '[⦿ $time ]($style)'
+
+[cmd_duration]
+style = "fg:yellow"
+format = '[⦿ ](fg:#94A0A1)[took $duration]($style) '
