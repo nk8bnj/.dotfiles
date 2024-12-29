@@ -27,7 +27,7 @@ return {
 			local total_marks = harpoon.get_length()
 
 			if total_marks == 0 then
-				return "󰛣 0/0"
+				return "Harpoon 󰛣 0/0"
 			end
 
 			local current_mark = "0"
@@ -37,7 +37,7 @@ return {
 				current_mark = tostring(mark_idx)
 			end
 
-			return string.format("󰛢 %s/%d", current_mark, total_marks)
+			return string.format("Harpoon: 󰛢 %s/%d", current_mark, total_marks)
 		end
 
 		require("lualine").setup({
@@ -91,7 +91,7 @@ return {
 					-- 	"filename",
 					-- 	path = 1,
 					-- },
-					{ "mode", icon_enabled = true },
+					-- { "mode", icon_enabled = true },
 					-- function()
 					--   return mode_map[vim.api.nvim_get_mode().mode] or "__"
 					-- end,

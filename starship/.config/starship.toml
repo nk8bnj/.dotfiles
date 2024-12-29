@@ -107,7 +107,7 @@
 # $time"""
 
 format = """
-[╭─](fg:#4F585E)$directory$rust$git_branch$git_state$git_status$package$golang$terraform$docker_context$nodejs$cmd_duration
+[╭─](fg:#4F585E)$directory$rust$git_branch$git_state$git_status$fill $cmd_duration$package$golang$terraform$docker_context$docker_context$nodejs$time
 [╰─](fg:#4F585E)$character
 """
 
