@@ -8,8 +8,19 @@ return {
 				auto_install = true,
 				highlight = { enable = true },
 				indent = { enable = false },
-				-- Additional fields
-				ensure_installed = "all", -- Install all parsers (can be a list of specific languages)
+				ensure_installed = {
+					"json",
+					"javascript",
+					"typescript",
+					"tsx",
+					"yaml",
+					"html",
+					"css",
+					"scss",
+					"bash",
+					"lua",
+					"vim",
+				},
 				sync_install = false, -- Parsers are installed asynchronously
 				ignore_install = {}, -- List of parsers to ignore during installation
 				modules = {}, -- Reserved for Treesitter's modular architecture

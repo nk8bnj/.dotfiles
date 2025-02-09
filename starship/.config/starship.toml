@@ -180,8 +180,9 @@ format = '[⦿ ](fg:#94A0A1)[$symbol ($version) ]($style)'
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "fg:#94A0A1 bold"
-format = '[⦿ $time ]($style)'
+style = "fg:#D3C6AA bold"
+# format = '[⦿ $time ]($style)'
+format = '[⦿ ](fg:#94A0A1)[$time ]($style)'
 
 [cmd_duration]
 style = "fg:yellow"

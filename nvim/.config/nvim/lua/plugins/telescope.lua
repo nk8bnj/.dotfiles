@@ -26,20 +26,20 @@ return {
 					},
 				},
 			},
-			pickers = {
-				find_files = {
-					theme = "ivy",
-				},
-        oldfiles = {
-          theme = "ivy",
-        },
-        live_grep = {
-          theme = "ivy",
-        },
-        buffers = {
-          theme = "ivy",
-        },
-			},
+			-- pickers = {
+			-- 	find_files = {
+			-- 		theme = "cursor",
+			-- 	},
+			--      oldfiles = {
+			--        theme = "ivy",
+			--      },
+			--      live_grep = {
+			--        theme = "ivy",
+			--      },
+			--      buffers = {
+			--        theme = "ivy",
+			--      },
+			-- },
 		})
 
 		telescope.load_extension("fzf")
