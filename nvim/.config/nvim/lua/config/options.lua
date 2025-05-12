@@ -62,6 +62,10 @@ vim.opt.fillchars = {
 	eob = " ",
 }
 
+vim.opt.smarttab = true
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+
 -- spell check
 -- vim.opt.spell = true
 -- vim.spelllang = "en_us"

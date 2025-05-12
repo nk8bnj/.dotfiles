@@ -147,3 +147,10 @@ export NVM_DIR="$HOME/.nvm"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/Nikita/.codeium/windsurf/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+export PATH="/usr/local/node/bin:$PATH"

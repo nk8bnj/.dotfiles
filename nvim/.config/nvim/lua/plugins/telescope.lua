@@ -28,7 +28,7 @@ return {
 			},
 			-- pickers = {
 			-- 	find_files = {
-			-- 		theme = "cursor",
+			-- 		theme = "ivy",
 			-- 	},
 			--      oldfiles = {
 			--        theme = "ivy",
@@ -45,7 +45,7 @@ return {
 		telescope.load_extension("fzf")
 
 		-- set keymaps
-    vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Find help" })
+		vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Find help" })
 		vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
 		vim.keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Find old files" })
 		vim.keymap.set("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", { desc = "Find word" })

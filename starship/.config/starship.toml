@@ -107,7 +107,7 @@
 # $time"""
 
 format = """
-[╭─](fg:#4F585E)$directory$rust$git_branch$git_state$git_status$fill $cmd_duration$package$golang$terraform$docker_context$docker_context$nodejs$time
+[╭─](fg:#4F585E)$directory$rust$git_branch$git_state$git_status$fill$cmd_duration$package$golang$terraform$docker_context$docker_context$nodejs$time
 [╰─](fg:#4F585E)$character
 """
 
@@ -177,10 +177,15 @@ symbol = ""
 style = "fg:#D182D8"
 format = '[⦿ ](fg:#94A0A1)[$symbol ($version) ]($style)'
 
+[package]
+symbol = ""
+style = "fg:#A9CD73"
+format = '[⦿ ](fg:#94A0A1)[$symbol ($version) ]($style)'
+
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "fg:#D3C6AA bold"
+style = "fg:#94A0A1 bold"
 # format = '[⦿ $time ]($style)'
 format = '[⦿ ](fg:#94A0A1)[$time ]($style)'
 
