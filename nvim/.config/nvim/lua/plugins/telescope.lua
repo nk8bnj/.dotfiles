@@ -14,9 +14,11 @@ return {
 		telescope.setup({
 			defaults = {
 				-- path_display = { "smart" },
+        sorting_strategy = "ascending",
 				layout_config = {
 					width = 0.8,
 					preview_width = 0.53,
+					prompt_position = "top",
 				},
 				mappings = {
 					i = {
@@ -26,6 +28,7 @@ return {
 					},
 				},
 			},
+
 			-- pickers = {
 			-- 	find_files = {
 			-- 		theme = "ivy",

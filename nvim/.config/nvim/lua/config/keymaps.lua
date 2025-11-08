@@ -1,5 +1,12 @@
 -- set leader key to space
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- Disable the spacebar key's default behavior in Normal and Visual modes
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+
+-- For conciseness
+local opts = { noremap = true, silent = true }
 
 -- use jk to exit insert mode
 vim.keymap.set("i", "jk", "<esc>", { desc = "Esc" })
@@ -62,3 +69,30 @@ end, { desc = "Open Spectre" })
 vim.keymap.set("n", "<leader>sw", function()
 	require("spectre").open_visual({ select_word = true })
 end, { desc = "Search current word" })
+
+-- Vertical scroll and center
+vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
+vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
+
+-- Find and center
+vim.keymap.set("n", "n", "nzzzv", opts)
+vim.keymap.set("n", "N", "Nzzzv", opts)
+
+-- Resize with arrows
+vim.keymap.set("n", "<Up>", ":resize +2<CR>", opts)
+vim.keymap.set("n", "<Down>", ":resize -2<CR>", opts)
+vim.keymap.set("n", "<Left>", ":vertical resize +2<CR>", opts)
+vim.keymap.set("n", "<Right>", ":vertical resize -2<CR>", opts)
+
+-- Stay in indent mode
+vim.keymap.set("v", "<", "<gv", opts)
+vim.keymap.set("v", ">", ">gv", opts)
+
+-- Keep last yanked when pasting
+vim.keymap.set("v", "p", '"_dP', opts)
+
+-- Make split windows equal width & height
+vim.keymap.set('n', '<leader>se', '<C-w>=', opts)
+
+-- Toggle Twilight
+vim.keymap.set("n", "<leader>tl", "<cmd>Twilight<cr>", { desc = "Toggle Twilight" })
