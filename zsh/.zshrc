@@ -154,3 +154,12 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 export PATH="/usr/local/node/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/Nikita/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/Nikita/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/Nikita/.antigravity/antigravity/bin:$PATH"
